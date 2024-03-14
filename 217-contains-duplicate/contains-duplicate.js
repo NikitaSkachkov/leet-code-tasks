@@ -4,6 +4,6 @@
  */
 var containsDuplicate = function(nums) {
 
-    let arr = Array.from(new Set(nums));
-    return arr.length !== nums.length
+    let arr = new Set(nums);
+    return arr.size !== nums.length
 };
