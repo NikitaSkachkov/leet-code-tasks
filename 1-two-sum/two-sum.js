@@ -12,8 +12,7 @@ var twoSum = function(nums, target) {
 
     for (let i =0; i < nums.length; i++) {
         if (obj.hasOwnProperty(target - nums[i]) && i !== obj[target - nums[i]]) {
-            arr.push(i);
-            arr.push(obj[target - nums[i]]);
+            arr.push(i, obj[target - nums[i]]);
             break;
         }
     }
