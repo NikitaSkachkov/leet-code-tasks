@@ -8,13 +8,11 @@ var twoSum = function(nums, target) {
     nums.forEach((num, index) => {
         obj[num] = index
     })
-    let arr =[];
 
     for (let i =0; i < nums.length; i++) {
         if (obj.hasOwnProperty(target - nums[i]) && i !== obj[target - nums[i]]) {
-            arr.push(i, obj[target - nums[i]]);
-            break;
+            return [i, obj[target - nums[i]]];
         }
     }
-    return arr;
+    return false;
 };
